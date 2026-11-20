@@ -1055,3 +1055,14 @@ html.intro-lock{ overflow:hidden; }
 a.flow__step{ text-decoration:none; transition:transform .2s cubic-bezier(.3,1.8,.5,1), box-shadow .2s; }
 a.flow__step:hover{ transform:translate(-2px,-3px) rotate(-1deg); box-shadow:8px 9px 0 var(--navy); }
 .chip--ok{ background:var(--up); color:var(--abyss); }
+
+/* nav X button */
+.nav__cta{ display:flex; align-items:center; gap:.7rem; }
+.nav__x{
+  display:grid; place-items:center; width:44px; height:44px; flex:none;
+  background:var(--navy); color:var(--cream);
+  border:3px solid var(--navy); border-radius:12px; box-shadow:4px 4px 0 var(--abyss);
+  transition:transform .15s cubic-bezier(.3,1.6,.6,1), background .2s, color .2s;
+}
+.nav__x svg{ width:20px; height:20px; }
+.nav__x:hover{ transform:translate(-2px,-2px) rotate(-6deg); background:var(--sponge); color:var(--navy); }
