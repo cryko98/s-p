@@ -1048,3 +1048,10 @@ html.intro-lock{ overflow:hidden; }
   .bubbles{ display:none; }
   .tape__list{ animation:none; }
 }
+
+/* ALS Association links */
+.give__link{ color:var(--sponge); font-weight:700; text-decoration-thickness:2px; text-underline-offset:3px; }
+.give__link:hover{ color:var(--pink); }
+a.flow__step{ text-decoration:none; transition:transform .2s cubic-bezier(.3,1.8,.5,1), box-shadow .2s; }
+a.flow__step:hover{ transform:translate(-2px,-3px) rotate(-1deg); box-shadow:8px 9px 0 var(--navy); }
+.chip--ok{ background:var(--up); color:var(--abyss); }
