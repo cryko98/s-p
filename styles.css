@@ -609,10 +609,10 @@ b,strong{ font-weight:700; }
 .msg{ max-width:80%; padding:.55rem .85rem; border-radius:18px; border:3px solid var(--navy); font-weight:600; color:var(--navy); font-size:.95rem; }
 .msg--in{ align-self:flex-start; background:#E3ECFA; border-bottom-left-radius:4px; }
 .msg--out{ align-self:flex-end; background:var(--sea-2); color:var(--cream); border-bottom-right-radius:4px; }
-.msg--img{ width:70%; aspect-ratio:4/3; display:grid; place-items:center; text-align:center; font-family:var(--mono); font-size:.72rem; padding:.4rem; }
-.msg--img span{ background:var(--cream); color:var(--navy); padding:.15rem .35rem; border-radius:6px; border:2px solid var(--navy); }
-.msg--sponge{ background:var(--tex-sponge) 0 0/100px auto; }
-.msg--star{ background:var(--tex-pink) 0 0/70px auto; }
+.msg--img{ width:70%; aspect-ratio:4/3; padding:0; overflow:hidden; background:var(--navy); }
+.msg--img img{ width:100%; height:100%; object-fit:cover; object-position:50% 70%; transition:scale .4s cubic-bezier(.3,1.6,.5,1); }
+.msg--img:nth-of-type(4) img{ object-position:50% 45%; }
+.msg--img:hover img{ scale:1.08; }
 
 /* =========================================================
    MEMORIAL
@@ -722,7 +722,7 @@ b,strong{ font-weight:700; }
 }
 .ticket__ca span{ color:var(--sponge); font-weight:700; }
 .ticket__stamp{
-  position:absolute; right:5%; top:.6rem;
+  position:absolute; right:36%; top:.5rem;
   font-family:var(--display); font-size:1.6rem; line-height:.95; text-align:center;
   color:var(--down); border:4px solid var(--down); border-radius:10px; padding:.5rem .7rem .3rem;
   transform:rotate(-16deg); opacity:.8; mix-blend-mode:multiply; pointer-events:none;
@@ -743,6 +743,56 @@ b,strong{ font-weight:700; }
    ========================================================= */
 .reveal{ opacity:0; translate:0 28px; transition:opacity .7s ease, translate .7s cubic-bezier(.2,1.2,.4,1); }
 .reveal.is-in{ opacity:1; translate:0 0; }
+
+/* =========================================================
+   CHARACTER CUTOUTS (user-supplied art)
+   ========================================================= */
+.char{
+  display:block; height:auto; pointer-events:auto;
+  filter:drop-shadow(6px 8px 0 rgba(11,30,74,.32));
+  transition:scale .35s cubic-bezier(.3,1.8,.5,1);
+}
+.char:hover{ scale:1.05; }
+
+/* duo in the "Wall Street" section */
+.char--ride{
+  position:absolute; right:0; top:-2.5rem; z-index:3;
+  width:clamp(220px, 23vw, 300px);
+  animation:charBob 5s ease-in-out infinite;
+}
+.char--ride.reveal{ translate:0 0; scale:.4; rotate:12deg; transition:opacity .4s ease, scale .8s cubic-bezier(.2,1.7,.4,1), rotate .8s cubic-bezier(.2,1.7,.4,1); }
+.char--ride.reveal.is-in{ scale:1; rotate:0deg; }
+.vs{ position:relative; z-index:2; }
+
+/* Patrick pulling SpongeBob in the debut panel */
+.panel--wide{ padding-right:clamp(1.2rem, 30vw, 380px); }
+.char--grab{
+  position:absolute; right:clamp(.5rem, 2vw, 2rem); bottom:-1.2rem;
+  width:clamp(220px, 26vw, 340px);
+  rotate:-4deg;
+  animation:charTug 2.4s ease-in-out infinite;
+  transform-origin:30% 90%;
+}
+@keyframes charTug{ 0%,100%{ transform:translateX(0) rotate(0deg); } 50%{ transform:translateX(-10px) rotate(-3deg); } }
+
+/* Patrick peeking over the index terminal */
+.char--chill{
+  position:absolute; right:7%; z-index:1;
+  width:clamp(120px, 12vw, 170px);
+  top:calc(-4.5rem - clamp(120px, 12vw, 170px) * .8);
+  transform:translateY(60%);
+  transition:transform 1s cubic-bezier(.2,1.5,.4,1) .3s, scale .35s cubic-bezier(.3,1.8,.5,1);
+}
+.char--chill.is-in{ transform:translateY(0); }
+
+/* SpongeBob presenting the order ticket */
+.char--present{
+  width:min(100%, 400px); margin-top:1.6rem;
+  scale:-1 1;
+  animation:charBob 6s ease-in-out infinite;
+}
+.char--present:hover{ scale:-1.05 1.05; }
+@keyframes charBob{ 0%,100%{ transform:translateY(0) rotate(-1.5deg); } 50%{ transform:translateY(-12px) rotate(1.5deg); } }
 
 /* =========================================================
    MOTION LAYER
@@ -953,6 +1003,10 @@ html.intro-lock{ overflow:hidden; }
    ========================================================= */
 @media (max-width: 980px){
   .gauge{ display:none; }
+  .char--ride{ position:relative; top:auto; right:auto; width:min(62%, 260px); margin:-1rem auto 1.6rem; }
+  .panel--wide{ padding-right:clamp(1.2rem,3vw,2.4rem); }
+  .char--grab{ position:relative; right:auto; bottom:auto; width:min(80%, 300px); margin:1rem auto -1.6rem; }
+  .char--present{ width:min(70%, 300px); margin-inline:auto; }
   .band{ left:-20%; right:-20%; }
 }
 @media (max-width: 980px){

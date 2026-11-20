@@ -336,7 +336,7 @@
   /* =========================================================
      REVEAL on scroll (+ triggers for counters / sparkline)
      ========================================================= */
-  const items = $$('.reveal');
+  const items = $$('.reveal, .char--chill');
   const counters = $$('[data-count]');
   if ('IntersectionObserver' in window && !reduce) {
     const io = new IntersectionObserver(entries => {
