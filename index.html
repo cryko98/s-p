@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SpongeBob &amp; Patrick 500 · $S&amp;P500</title>
+  <meta name="description" content="Wall Street follows 500 companies. We follow a fry cook and a guy who lives under a rock. $S&P500 — a fan-made Solana meme coin.">
+  <meta property="og:title" content="SpongeBob & Patrick 500 · $S&P500">
+  <meta property="og:description" content="There's only one S&P I care about. A fan-made Solana meme coin.">
+  <meta property="og:image" content="logo.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0A63B5">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Fredoka:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- reusable shapes: outlined sea-flower (stroke layer under fill layer = clean silhouette) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="flower" viewBox="-60 -60 120 120">
+      <g fill="var(--fl-line)" stroke="var(--fl-line)" stroke-width="7">
+        <ellipse cx="0" cy="-27" rx="15" ry="24"/>
+        <ellipse cx="0" cy="-27" rx="15" ry="24" transform="rotate(72)"/>
+        <ellipse cx="0" cy="-27" rx="15" ry="24" transform="rotate(144)"/>
+        <ellipse cx="0" cy="-27" rx="15" ry="24" transform="rotate(216)"/>
+        <ellipse cx="0" cy="-27" rx="15" ry="24" transform="rotate(288)"/>
+      </g>
+      <g fill="var(--fl-fill)">
+        <ellipse cx="0" cy="-27" rx="15" ry="24"/>
+        <ellipse cx="0" cy="-27" rx="15" ry="24" transform="rotate(72)"/>
+        <ellipse cx="0" cy="-27" rx="15" ry="24" transform="rotate(144)"/>
+        <ellipse cx="0" cy="-27" rx="15" ry="24" transform="rotate(216)"/>
+        <ellipse cx="0" cy="-27" rx="15" ry="24" transform="rotate(288)"/>
+      </g>
+      <circle r="9" fill="none" stroke="var(--fl-line)" stroke-width="4"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ============ TICKER TAPE ============ -->
+<div class="tape" aria-label="Bikini Bottom Exchange ticker">
+  <div class="tape__label">BBX<span>LIVE-ISH</span></div>
+  <div class="tape__track">
+    <ul class="tape__list" id="tape">
+      <li><b>$S&amp;P500</b> <em class="up">▲ CA SOON</em></li>
+      <li><b>SPONGE</b> <em class="up">▲ 100% ABSORBENT</em></li>
+      <li><b>STAR</b> <em class="up">▲ +5.00</em></li>
+      <li><b>ROCK</b> <em class="flat">▬ 0.00 (STILL A ROCK)</em></li>
+      <li><b>JELLY</b> <em class="up">▲ +∞ SEASON OPEN</em></li>
+      <li><b>CONSTITUENTS</b> <em class="flat">2 / 500</em></li>
+      <li><b>EST.</b> <em class="flat">05·01·1999</em></li>
+      <li><b>BUBBLES POPPED</b> <em class="up js-pops">0</em></li>
+      <li><b>WALL ST</b> <em class="down">▼ BORING</em></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <a class="nav__brand" href="#top" aria-label="SpongeBob & Patrick 500 home">
+    <img src="assets/sp-row.png" alt="" width="84" height="29">
+    <span>SpongeBob <i>&amp;</i> Patrick <b>500</b></span>
+  </a>
+  <nav class="nav__links" aria-label="Sections">
+    <a href="#index">The Index</a>
+    <a href="#lore">Lore</a>
+    <a href="#chart">All-Time Chart</a>
+    <a href="#give">Giving Back</a>
+  </nav>
+  <a class="btn btn--buy" href="#buy">Buy $S&amp;P500</a>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__rays" aria-hidden="true"></div>
+  <div class="flowers" aria-hidden="true">
+    <svg class="fl" style="--x:4%;--y:10%;--s:150px;--fl-fill:#8FE0D9;--fl-line:#5CC2C9;--d:0s"><use href="#flower"/></svg>
+    <svg class="fl" style="--x:40%;--y:4%;--s:90px;--fl-fill:#FFB8D2;--fl-line:#F28BB4;--d:-3s"><use href="#flower"/></svg>
+    <svg class="fl" style="--x:88%;--y:6%;--s:170px;--fl-fill:#C7E36B;--fl-line:#9EC447;--d:-6s"><use href="#flower"/></svg>
+    <svg class="fl" style="--x:63%;--y:58%;--s:70px;--fl-fill:#B9A6F2;--fl-line:#8E78DA;--d:-2s"><use href="#flower"/></svg>
+    <svg class="fl" style="--x:15%;--y:70%;--s:80px;--fl-fill:#FFE58A;--fl-line:#E8C653;--d:-8s"><use href="#flower"/></svg>
+  </div>
+  <div class="bubbles js-bubbles" aria-hidden="true"></div>
+
+  <div class="hero__inner">
+    <div class="hero__copy">
+      <p class="kicker"><span class="dot"></span> Listed on the Bikini Bottom Exchange · Solana</p>
+
+      <h1 class="title" id="hero-title" aria-label="S&amp;P 500">
+        <span class="title__row">
+          <span class="L L--s" data-t="S" style="--r:-6deg">S</span><span class="L L--amp" data-t="&amp;" style="--r:4deg">&amp;</span><span class="L L--p" data-t="P" style="--r:5deg">P</span>
+        </span>
+        <span class="title__row title__row--2">
+          <span class="L L--n" data-t="5" style="--r:-4deg">5</span><span class="L L--n" data-t="0" style="--r:2deg">0</span><span class="L L--n" data-t="0" style="--r:-3deg">0</span>
+        </span>
+      </h1>
+      <p class="fullname">SpongeBob <span class="amp">&amp;</span> Patrick 500 &nbsp;·&nbsp; <b>$S&amp;P500</b></p>
+
+      <div class="convo">
+        <p class="say say--q"><span>“Is this the S&amp;P 500?”</span></p>
+        <p class="say say--a"><span>“No, this is Patrick.”</span></p>
+      </div>
+
+      <div class="ca" role="group" aria-label="Contract address">
+        <span class="ca__tag">CA</span>
+        <code class="ca__val js-ca">coming soon</code>
+        <button class="ca__btn js-copy" type="button" disabled>Copy</button>
+      </div>
+
+      <div class="hero__cta">
+        <a class="btn btn--yellow" href="#lore">Read the lore</a>
+        <a class="btn btn--pink" href="#buy">How to buy</a>
+      </div>
+    </div>
+
+    <div class="hero__art">
+      <div class="porthole">
+        <img src="logo.jpg" alt="SpongeBob and Patrick celebrating behind the S&amp;P 500 logo" width="1280" height="1265">
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+      <span class="sticker sticker--a">Not the<br>boring one</span>
+      <span class="sticker sticker--b">2 constituents.<br>0 regrets.</span>
+    </div>
+  </div>
+
+  <svg class="sand" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 64 C 180 20, 300 96, 480 70 S 780 18, 960 54 S 1260 104, 1440 46 V120 H0Z" fill="#F1DCA6"/>
+    <path d="M0 64 C 180 20, 300 96, 480 70 S 780 18, 960 54 S 1260 104, 1440 46" fill="none" stroke="#0B1E4A" stroke-width="5"/>
+  </svg>
+</section>
+
+<!-- ============ INDEX TERMINAL ============ -->
+<section class="sandbed" id="index" aria-labelledby="index-title">
+  <div class="wrap">
+    <div class="terminal reveal">
+      <div class="terminal__bar">
+        <span class="terminal__sym">$S&amp;P500</span>
+        <span class="terminal__name">SpongeBob &amp; Patrick 500 Index</span>
+        <span class="terminal__status"><i></i> PRE-LAUNCH</span>
+      </div>
+      <div class="terminal__body">
+        <div class="terminal__chart">
+          <div class="tf" role="tablist" aria-label="Timeframe">
+            <button type="button" role="tab" aria-selected="false" data-tf="1D">1D</button>
+            <button type="button" role="tab" aria-selected="false" data-tf="1W">1W</button>
+            <button type="button" role="tab" aria-selected="false" data-tf="1Y">1Y</button>
+            <button type="button" role="tab" aria-selected="true" data-tf="ALL">ALL</button>
+          </div>
+          <svg class="spark js-spark" viewBox="0 0 600 220" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="sparkfill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#2EC26A" stop-opacity=".45"/>
+                <stop offset="1" stop-color="#2EC26A" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <path class="spark__area" d=""/>
+            <path class="spark__line" d=""/>
+          </svg>
+          <p class="terminal__note">Chart for vibes only. No price data until launch.</p>
+        </div>
+        <dl class="stats">
+          <div><dt>Constituents</dt><dd>2</dd></div>
+          <div><dt>Listed since</dt><dd>May 1, 1999</dd></div>
+          <div><dt>Chain</dt><dd>Solana</dd></div>
+          <div><dt>Launchpad</dt><dd>Pump.fun</dd></div>
+          <div><dt>Markets reached</dt><dd>180+</dd></div>
+          <div><dt>Languages</dt><dd>30+</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATEMENT / COMPARISON ============ -->
+<section class="sponge" aria-labelledby="vs-title">
+  <svg class="edge edge--top" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 H1440 V22 C1200 60 1080 8 860 34 S 420 60 240 26 S 60 40 0 30Z" fill="#F1DCA6"/></svg>
+  <div class="wrap">
+    <h2 class="big reveal" id="vs-title">Wall Street follows <span class="hl-num">500</span> companies.</h2>
+    <p class="big-sub reveal">We follow a fry cook and a guy who lives under a rock.</p>
+
+    <div class="vs reveal">
+      <div class="vs__head">
+        <span></span>
+        <span class="vs__col vs__col--dull">The other S&amp;P 500</span>
+        <span class="vs__col vs__col--us">The S&amp;P 500 we care about</span>
+      </div>
+      <div class="vs__row"><span>Constituents</span><span>500 companies</span><span>2 best friends</span></div>
+      <div class="vs__row"><span>Headquarters</span><span>A tower in Manhattan</span><span>A pineapple &amp; a rock</span></div>
+      <div class="vs__row"><span>Sector</span><span>Everything</span><span>Fry cooking, rock dwelling</span></div>
+      <div class="vs__row"><span>Volatility driver</span><span>Fed meetings</span><span>Jellyfish season</span></div>
+      <div class="vs__row"><span>Where fees go</span><span>Fund managers</span><span>Charity <small>(partner TBA)</small></span></div>
+    </div>
+
+    <p class="grew reveal">We grew up with those two. Now we want to give back.</p>
+  </div>
+</section>
+
+<!-- ============ THE JOKE ============ -->
+<section class="joke" id="lore" aria-labelledby="joke-title">
+  <div class="wrap joke__grid">
+    <div class="joke__text reveal">
+      <p class="eyebrow">Lore · Chapter 01</p>
+      <h2 class="h2" id="joke-title">The joke behind the 500</h2>
+      <p>On <b>November 7, 2026</b>, @turbomander posted a clip of SpongeBob and Patrick with one line. The post drew over <b>320,000 views</b>.</p>
+      <p><b>Gabe</b> put a name to the joke: <em>SpongeBob &amp; Patrick 500.</em> If you grew up watching them go jellyfishing, those two letters make perfect sense.</p>
+    </div>
+    <article class="post reveal" aria-label="The original post">
+      <header class="post__head">
+        <span class="post__avatar" aria-hidden="true">T</span>
+        <span class="post__who"><b>turbomander</b><small>@turbomander · Nov 7, 2026</small></span>
+      </header>
+      <p class="post__body">there’s only one S &amp; P I care about</p>
+      <div class="post__media" aria-hidden="true"><span class="post__play"></span></div>
+      <footer class="post__foot"><span class="post__views">320K+</span> views</footer>
+    </article>
+  </div>
+</section>
+
+<!-- ============ ORIGIN COMIC ============ -->
+<section class="origin" aria-labelledby="origin-title">
+  <svg class="edge edge--top" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 H1440 V30 C1260 4 1120 52 900 30 S 520 0 320 34 S 80 20 0 40Z" fill="#1FA3E8"/></svg>
+  <div class="wrap">
+    <p class="eyebrow eyebrow--dark reveal">Lore · Chapter 02</p>
+    <h2 class="h2 h2--dark reveal" id="origin-title">Before Bikini Bottom, there was <span class="nowrap">Bob the Sponge</span></h2>
+
+    <ol class="comic">
+      <li class="panel reveal" style="--rot:-1.5deg">
+        <span class="panel__cap">Dana Point, California</span>
+        <div class="panel__art panel__art--pool" aria-hidden="true"><i></i><i></i><i></i></div>
+        <p>Stephen Hillenburg taught <b>marine science</b>. To show his students what lived in the tide pools, he drew a comic: <em>The Intertidal Zone.</em></p>
+      </li>
+      <li class="panel reveal" style="--rot:1deg">
+        <span class="panel__cap">Meet the guide</span>
+        <div class="panel__art panel__art--shades" aria-hidden="true">
+          <svg viewBox="0 0 160 70"><path d="M8 18 H152 V26 H148 C146 54 118 60 100 52 C90 48 86 36 84 28 H76 C74 36 70 48 60 52 C42 60 14 54 12 26 H8Z" fill="#0B1E4A"/><path d="M24 28 C26 44 46 46 56 40" stroke="#5FA8FF" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M104 28 C106 44 126 46 136 40" stroke="#5FA8FF" stroke-width="5" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <p>One of its guides was <b>Bob the Sponge</b>. He wore sunglasses. He didn’t even have arms.</p>
+      </li>
+      <li class="panel reveal" style="--rot:-.5deg">
+        <span class="panel__cap">Years later…</span>
+        <div class="panel__art panel__art--sponge" aria-hidden="true"><span></span></div>
+        <p>Hillenburg drew him in the shape of a <b>kitchen sponge</b>, and the character clicked.</p>
+      </li>
+      <li class="panel panel--wide reveal" style="--rot:1.2deg">
+        <span class="panel__cap panel__cap--pink">May 1, 1999 · TV debut</span>
+        <p class="panel__big">SpongeBob walks up to the Krusty Krab to ask for his dream job, then loses his nerve. <b>Patrick talks him into going inside.</b></p>
+        <p class="panel__kicker">Before any of us knew SpongeBob could cook, Patrick already believed in him.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ ALL-TIME CHART ============ -->
+<section class="ath" id="chart" aria-labelledby="ath-title">
+  <svg class="edge edge--top" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 H1440 V36 C1240 10 1060 56 820 28 S 400 4 220 38 S 40 30 0 22Z" fill="#FF9FB2"/></svg>
+  <div class="wrap">
+    <p class="eyebrow reveal">Lore · Chapter 03</p>
+    <h2 class="h2 reveal" id="ath-title">27 years of Bikini Bottom</h2>
+    <p class="lede reveal">An all-time chart with no red candles.</p>
+
+    <ol class="candles">
+      <li class="candle reveal" style="--h:28%">
+        <div class="candle__card"><time>Before ’99</time><p><em>The Intertidal Zone</em>: a teacher’s tide-pool comic.</p></div>
+        <span class="candle__body"></span>
+      </li>
+      <li class="candle reveal" style="--h:44%">
+        <div class="candle__card"><time>May 1, 1999</time><p>SpongeBob and Patrick make their TV debut.</p></div>
+        <span class="candle__body"></span>
+      </li>
+      <li class="candle reveal" style="--h:62%">
+        <div class="candle__card"><time>2024 · 25 years</time><p>180+ markets, 30+ languages.</p></div>
+        <span class="candle__body"></span>
+      </li>
+      <li class="candle reveal" style="--h:78%">
+        <div class="candle__card"><time>2024 · Super Bowl</time><p>The two friends call a Chiefs–49ers game on Nickelodeon.</p></div>
+        <span class="candle__body"></span>
+      </li>
+      <li class="candle candle--ath reveal" style="--h:100%">
+        <div class="candle__card"><time>Nov 2026</time><p>One post, 320K+ views. The S&amp;P 500 gets a new meaning.</p></div>
+        <span class="candle__body"></span>
+      </li>
+    </ol>
+
+    <div class="chat reveal" aria-label="A group chat, explained">
+      <div class="chat__copy">
+        <h3 class="h3">The group chat index</h3>
+        <p>Some of us watched SpongeBob after school. Now we send a picture of him bent over like a chicken, and our friends know exactly what tone to read it in.</p>
+        <p>An open-mouthed Patrick can carry an entire group chat without anybody typing a word.</p>
+      </div>
+      <div class="chat__phone" aria-hidden="true">
+        <div class="msg msg--in">did you see the S&amp;P today??</div>
+        <div class="msg msg--out msg--img msg--sponge"><span>[ mocking sponge.jpg ]</span></div>
+        <div class="msg msg--in">ok fair</div>
+        <div class="msg msg--out msg--img msg--star"><span>[ open-mouth star.jpg ]</span></div>
+        <div class="msg msg--in">say less</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MEMORIAL ============ -->
+<section class="memorial" aria-labelledby="mem-title">
+  <div class="memorial__glow" aria-hidden="true"></div>
+  <div class="wrap wrap--narrow">
+    <p class="eyebrow eyebrow--soft reveal">In memory</p>
+    <h2 class="memorial__name reveal" id="mem-title">Stephen Hillenburg</h2>
+    <p class="memorial__years reveal">1961 – 2018</p>
+    <p class="reveal">In March 2017, Stephen shared that he had ALS. He told fans he wanted to keep working on <em>SpongeBob</em> and the other things he loved for as long as he could. He died on November 26, 2018, at age 57.</p>
+    <p class="reveal">Fans remembered him in a way that could only have come from Bikini Bottom.</p>
+    <div class="memorial__stat reveal">
+      <span class="memorial__num">1.2M+</span>
+      <span>people signed a petition asking for “Sweet Victory,” the song from <em>Band Geeks</em>, to be played at the Super Bowl in his honor.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GIVING BACK ============ -->
+<section class="give" id="give" aria-labelledby="give-title">
+  <div class="wrap">
+    <p class="eyebrow reveal">The point of all this</p>
+    <h2 class="h2 reveal" id="give-title">Giving back to the ocean that raised us</h2>
+    <p class="lede reveal">A teacher who drew a comic about tide pools gave a lot of us a childhood. Our plan for this fan-made meme coin is to send the creator fees from trades on Pump.fun to charity.</p>
+
+    <div class="flow reveal" aria-label="Where creator fees go">
+      <div class="flow__step"><span class="flow__n">01</span><b>Trades on Pump.fun</b><small>Every $S&amp;P500 trade earns a creator fee</small></div>
+      <span class="flow__pipe" aria-hidden="true"><i></i><i></i><i></i></span>
+      <div class="flow__step"><span class="flow__n">02</span><b>Creator fees</b><small>Routed straight on, not kept</small></div>
+      <span class="flow__pipe" aria-hidden="true"><i></i><i></i><i></i></span>
+      <div class="flow__step flow__step--tba"><span class="flow__n">03</span><b>Charity partner</b><small>To be announced</small></div>
+    </div>
+
+    <div class="status reveal">
+      <div class="status__row"><span>Charity partner</span><b class="chip chip--wait">Announcing soon</b></div>
+      <div class="status__row"><span>Fee routing</span><b class="chip chip--wait">Not active yet</b></div>
+      <div class="status__row"><span>Donation record</span><b class="chip">Will be linked here</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW TO BUY ============ -->
+<section class="buy" id="buy" aria-labelledby="buy-title">
+  <svg class="edge edge--top" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 H1440 V26 C1220 54 1020 6 780 30 S 380 56 200 24 S 40 30 0 40Z" fill="#0A63B5"/></svg>
+  <div class="wrap buy__grid">
+    <div class="reveal">
+      <p class="eyebrow eyebrow--dark">Order desk</p>
+      <h2 class="h2 h2--dark" id="buy-title">How to buy $S&amp;P500</h2>
+      <p class="buy__lede">Four steps. No broker, no trading hours, no suit.</p>
+      <img class="buy__logo" src="assets/sp500-text.png" alt="S&amp;P 500" width="712" height="432" loading="lazy">
+    </div>
+
+    <div class="ticket reveal" aria-label="Order ticket">
+      <div class="ticket__head">
+        <span>ORDER TICKET</span>
+        <span class="ticket__no">#0001999</span>
+      </div>
+      <ol class="ticket__steps">
+        <li><b>Get a wallet</b><span>Download Phantom or any Solana wallet.</span></li>
+        <li><b>Load up on SOL</b><span>Buy SOL on an exchange and send it to your wallet.</span></li>
+        <li><b>Head to Pump.fun</b><span>Connect your wallet on pump.fun.</span></li>
+        <li><b>Paste the CA &amp; swap</b><span>Search the contract address and swap SOL for $S&amp;P500.</span></li>
+      </ol>
+      <div class="ticket__ca">
+        <span>CA</span><code class="js-ca">coming soon</code>
+      </div>
+      <div class="ticket__stamp" aria-hidden="true">PRE-<br>LAUNCH</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <img class="foot__logo" src="assets/sp500-text.png" alt="S&amp;P 500" width="712" height="432" loading="lazy">
+    <p class="foot__line">There’s only one S&amp;P we care about.</p>
+    <div class="foot__links">
+      <!-- TODO: replace # with the real community links -->
+      <a class="btn btn--small" href="#" aria-label="X (Twitter) community">X / Twitter</a>
+      <a class="btn btn--small" href="#" aria-label="Pump.fun page">Pump.fun</a>
+    </div>
+    <p class="foot__legal">
+      $S&amp;P500 is a fan-made meme coin with no intrinsic value and no expectation of financial return. Not financial advice.
+      Not affiliated with, endorsed by, or connected to Nickelodeon, Paramount, the estate of Stephen Hillenburg, or S&amp;P Dow Jones Indices.
+      SpongeBob SquarePants and related characters belong to their respective owners.
+    </p>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>
