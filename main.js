@@ -10,7 +10,7 @@
   /* =========================================================
      CONTRACT ADDRESS — paste it here once live
      ========================================================= */
-  const CA = ''; // e.g. 'So1aNa...pump'
+  const CA = 'ACVkPjBRHWMZEKExATPQaw6PwMZ7ED4wobxomeWGpump';
   if (CA) {
     $$('.js-ca').forEach(el => { el.textContent = CA; });
     const btn = $('.js-copy');

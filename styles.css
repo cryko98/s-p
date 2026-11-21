@@ -1066,3 +1066,16 @@ a.flow__step:hover{ transform:translate(-2px,-3px) rotate(-1deg); box-shadow:8px
 }
 .nav__x svg{ width:20px; height:20px; }
 .nav__x:hover{ transform:translate(-2px,-2px) rotate(-6deg); background:var(--sponge); color:var(--navy); }
+
+/* =========================================================
+   LIVE STATE
+   ========================================================= */
+.terminal__status--live{ color:var(--up); }
+.terminal__status--live i{ background:var(--up); box-shadow:0 0 0 0 rgba(46,194,106,.6); animation:pulse 1.4s ease-in-out infinite; }
+.terminal__note a{ color:var(--sponge); font-weight:700; }
+.btn--hero{ font-size:1.15rem; padding:.85rem 1.3rem .7rem; }
+.ticket__buy{ margin:1rem 1.3rem 0; width:calc(100% - 2.6rem); justify-content:center; }
+.ticket__steps a{ color:var(--sea-3); font-weight:700; }
+.ticket__stamp{ color:var(--up); border-color:var(--up); }
+.ca__val{ font-size:.82rem; }
+.ca__val::after{ content:none; }
